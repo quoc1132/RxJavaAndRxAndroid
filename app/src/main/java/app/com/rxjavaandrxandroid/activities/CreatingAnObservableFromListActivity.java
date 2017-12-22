@@ -72,15 +72,23 @@ public class CreatingAnObservableFromListActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onNext(String s) {
+            public void onNext(final String s) {
                 //you can change data or check condition in there
-                arrayList.add("Hello " + s);
                 new Handler(getMainLooper()).post(new Runnable() {
                     @Override
                     public void run() {
+                        arrayList.add("Hello ");
                         subjectsRecyclerViewAdapter.notifyDataSetChanged();
                     }
                 });
+
+                new Handler(getMainLooper()).postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        arrayList.add("Hello " + s);
+                        subjectsRecyclerViewAdapter.notifyDataSetChanged();
+                    }
+                },1000);
             }
 
             @Override
