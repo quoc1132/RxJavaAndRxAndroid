@@ -66,14 +66,14 @@ public class CreatingAnObservableFromListActivity extends AppCompatActivity {
             }
         }));
 
-        Observable.fromArray(arrayListTemp).delay(2, TimeUnit.SECONDS).subscribe(new Observer<String>() {
+        Observable.fromArray(arrayListTemp).subscribe(new Observer<String>() {
             @Override
             public void onSubscribe(Disposable d) {
-
             }
 
             @Override
             public void onNext(String s) {
+                //you can change data or check condition in there
                 arrayList.add("Hello " + s);
                 new Handler(getMainLooper()).post(new Runnable() {
                     @Override
