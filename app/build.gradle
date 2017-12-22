@@ -26,6 +26,10 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
 
+    //RecyclerView
+    implementation 'com.android.support:recyclerview-v7:26.1.0'
+
+
     //for Fragment,Activity, Dialog, Thread..
     annotationProcessor "org.androidannotations:androidannotations:4.4.0"
     implementation "org.androidannotations:androidannotations-api:4.4.0"
