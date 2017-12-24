@@ -88,7 +88,7 @@ public class CreatingAnObservableFromListActivity extends AppCompatActivity {
                         arrayList.add("Hello " + s);
                         subjectsRecyclerViewAdapter.notifyDataSetChanged();
                     }
-                },1000);
+                }, 1000);
             }
 
             @Override
